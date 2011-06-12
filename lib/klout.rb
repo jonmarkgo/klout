@@ -41,6 +41,11 @@ class Klout
       request_uri = "http://api.klout.com/1/users/show.json?key=#{@@api_key}&users=#{usernames}"
       return request(request_uri)
     end
+
+    def topics(usernames)
+      request_uri = "http://api.klout.com/1/users/topics.json?key=#{@@api_key}&users=#{usernames}"
+      return request(request_uri)
+    end
     
     def request(request_uri)
       begin
